@@ -18,11 +18,11 @@ func setupRoutes(app *fiber.App) {
 }
 
 func main() {
-	err := godotenv.Load()
+	err := godotenv.Load()  
 	if err != nil {
 		fmt.Println(err)
 	}
-	app := fiber.New()
+	app := fiber.New()  // lets try fibre but gorilla mux is normally prefered
 
 	app.Use(logger.New())
 
